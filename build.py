@@ -12,16 +12,15 @@ def xy(la, lo): return round(425 + (lo - lon0) * 90350 * 0.44), round(249 - (la 
 S = [
  (1, 'Figures', 'RADIO KAIKAN', 'AKIHABARA RADIO KAIKAN', 'radio-kaikan.jpg', 'Figures, cards, character goods', '秋葉原ラジオ会館',
   'Glass cases of figures on every floor, from Dragon Ball Z and Evangelion to Demon Slayer and Jujutsu Kaisen. Look into the small shops and see what you can find. The photo shows a figure case in an Akihabara shop.', None, None, 'Akihabara Radio Kaikan'),
- (4, 'Treasure', 'TRADER', 'TRADER', 'trader.jpg', 'Figures and toys, packed to the ceiling', 'トレーダー',
-  'A bright shop crammed with figures and toys. Take your time and look at every shelf: this is where Carolina can hunt for Mazinger Z. The photo shows a case of vintage robot toys, the kind of thing we look for.', None, None, 'Trader Akihabara main store'),
- (2, 'Goods', 'COSPA', 'COSPA', 'hero.jpg', 'Character goods and prizes, 4th floor', 'コスパ（4階）',
-  'The COSPA shop on the 4th floor of the Gee Store building, a short walk from Radio Kaikan. Racks of character goods, plushies and capsule toys: a fun place to look around and pick something small. The photo shows a capsule toy aisle in an Akihabara shop.', None, None, 'Gee Store Akiba Akihabara'),
+ (2, 'Goods', 'COSPA 4F', 'COSPA G-STORE AKIBA, 4TH FLOOR', 'cospa.jpg', 'Character clothes and goods', 'コスパ ジーストア・アキバ店',
+  'Character apparel and goods on the 4th floor of the Onoden main building, a few minutes from Radio Kaikan. Take the lift to the 4th floor. The photo shows the building.', '10:00 to 20:00', '10:00 to 20:00, no regular day off (official site, checked on 5 Nov 2026)', 'COSPA G-STORE Akiba Onoden'),
  (3, 'Crane games', 'GIGO 3', 'GIGO AKIHABARA 3', 'gigo.jpg', 'Arcade and crane games', 'GiGO 秋葉原3号館',
   'Rows and rows of crane games filled with anime prizes. Try a few machines and win something to take home. You do not need to win to enjoy it.', None, None, 'GiGO Akihabara 3'),
+ (4, 'Treasure', 'TRADER', 'TRADER', 'trader.jpg', 'Figures and toys, packed to the ceiling', 'トレーダー',
+  'A bright shop crammed with figures and toys. Take your time and look at every shelf: this is where Carolina can hunt for Mazinger Z. The photo shows a case of vintage robot toys, the kind of thing we look for.', None, None, 'Trader Akihabara main store'),
  (5, 'Goods', 'ANIMATE', 'ANIMATE AKIHABARA', 'animate.jpg', 'Anime goods, many series', 'アニメイト秋葉原',
   'Several floors of current anime and manga goods: Demon Slayer, SPY&times;FAMILY, Jujutsu Kaisen, HUNTER&times;HUNTER, Dandadan and more. The Annex building has a floor of capsule toys, like the wall in the photo. A good last stop for souvenirs.', '10:00 to 21:00', '10:00 to 21:00, open daily (official site, checked on 5 Nov 2026)', 'Animate Akihabara'),
 ]
-S.sort(key=lambda p: p[0])
 N = {p[0]: p for p in S}
 clock = '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 4.5V8l2.5 1.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
 def tile(p): return f'<a class="tile" href="#p{p[0]}"><img src="img/{p[4]}" alt="" loading="lazy"><b class="no">{p[0]:02d}</b><span class="tt">{p[1]}</span><span class="tn">{p[2]}</span></a>'
@@ -41,19 +40,21 @@ for k, p in enumerate(P[1:]):
     pins += f'{a0}<circle cx="{x}" cy="{y}" r="16" fill="#121212" stroke="#fff" stroke-width="3"/><text x="{x}" y="{y+6}" text-anchor="middle" font-size="16" font-weight="900" fill="#fff">{lab}</text><g class="lbl"><rect x="{x-w//2}" y="{y-46}" width="{w}" height="28" fill="#121212"/><text x="{x}" y="{y-27}" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">{nm}</text></g>{a1}'
 mapsvg = base + line + pins + '</svg>'
 R = [('11:00', 'Meet inside Vie de France', 'The bakery caf&eacute; near Akihabara Station. I will be there at 11:00, and use the map link in my message.', None),
-     ('11:10', 1, 'figures, about 35 min', None), ('11:45', 2, 'goods, about 30 min', None), ('12:15', 3, 'crane games, about 40 min', None),
-     ('12:55', 4, 'toys, about 35 min', None), ('13:30', 5, 'goods and souvenirs, about 25 min', None), ('14:00', 'Goodbye, near the station', 'We finish around 14:00.', None)]
+     ('11:10', 1, 'figures, about 35 min', None), ('11:45', 2, 'goods, about 30 min', None), ('12:20', 3, 'crane games, about 40 min', None),
+     ('13:00', 4, 'figures and toys, about 35 min', None), ('13:35', 5, 'goods and souvenirs, about 25 min', None), ('14:00', 'Goodbye, near the station', 'We finish around 14:00.', None)]
 tl = ''
 for t, a, b, _ in R:
-    if isinstance(a, int): tl += f'<li><b>{t}</b><span><a href="#p{a}" style="color:inherit;font-weight:800">{a:02d} {N[a][3].title()}</a><em>{b}</em></span></li>'
+    if isinstance(a, int): tl += f'<li><b>{t}</b><span><a href="#p{a}" style="color:inherit;font-weight:800">{a:02d} {N[a][3].title().replace('Cospa','COSPA').replace('Gigo','GiGO')}</a><em>{b}</em></span></li>'
     else: tl += f'<li><b>{t}</b><span>{a}<em>{b}</em></span></li>'
 route = (f'<section class="route" id="route"><div class="hd"><span class="big">&rarr;</span><div><span class="genre">Tuesday, November 17</span><h3>THE ROUTE</h3></div></div>'
          f'<p class="tx">Meet at 11:00, finish around 14:00. All on foot, all within a small area.</p><ul class="tl">{tl}</ul></section>')
 credits = ('The photo for COSPA is a capsule toy aisle from another shop. The photos show the kind of place, not always the shop itself. All from Wikimedia Commons: ' + '; '.join(CREDITS) + '. Animate hours come from its official site, checked on November 5. Other hours were not confirmed. The map is a simple sketch, not to scale, and the positions of Trader and COSPA are approximate. Times are approximate and can move on the day.')
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Akihabara Anime Tour for Valeska, Stefano &amp; Carolina</title><meta name="robots" content="noindex,nofollow">
 <meta name="description" content="Five stops in Akihabara: Radio Kaikan, COSPA, GiGO 3, Trader and Animate. Tuesday, November 17, 11:00 to 14:00.">
-<meta property="og:title" content="Akihabara Anime Tour for Valeska, Stefano and Carolina"><meta property="og:description" content="Figures, crane games and anime goods. Tuesday, November 17, 11:00 to 14:00."><meta property="og:image" content="{URL}img/hero.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 fill=%22%23D9342B%22/%3E%3C/svg%3E">
+<meta property="og:type" content="website"><meta property="og:url" content="{URL}"><meta property="og:site_name" content="Akihabara Anime Tour">
+<meta property="og:title" content="Akihabara Anime Tour for Valeska, Stefano and Carolina"><meta property="og:description" content="Figures, crane games and anime goods. Tuesday, November 17, 11:00 to 14:00."><meta property="og:image" content="{URL}og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Akihabara Anime Tour for Valeska, Stefano and Carolina"><meta name="twitter:description" content="Figures, crane games and anime goods. Tuesday, November 17, 11:00 to 14:00."><meta name="twitter:image" content="{URL}og.jpg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
 <style>{css}</style></head><body>
 <div class="col"><div class="top"><span>GUEST GUIDE</span><span>AKIHABARA &middot; 5 STOPS</span></div>
