@@ -8,4 +8,4 @@ c=Image.new('RGB',(W,H),'#121212'); rh=(H-G)//2; rw=W-LW-G
 c.paste(fit('ogp-src.jpg',LW,H,.42,.5),(0,0))
 c.paste(fit('img/manga.jpg',rw,rh,.72,.1),(LW+G,0))
 c.paste(fit('img/figurecase.jpg',rw,H-rh-G),(LW+G,rh+G))
-c.save('img/hero-collage.jpg',quality=88,optimize=True)
+c.save('img/hero-figures.jpg',quality=88,optimize=True)
