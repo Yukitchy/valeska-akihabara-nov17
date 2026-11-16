@@ -14,7 +14,7 @@ CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.mapcache'); o
 STOPS = {i: (PP[i][3], PP[i][0], PP[i][1]) for i in range(1, 7)}
 NAMES = {i: PP[i][2] for i in range(1, 7)}
 HOURS = {1: 'BiTO AKIBA PLAZA 1F, Electric Town exit', 2: 'Figure and hobby shops', 3: 'Character goods, 4th floor', 4: 'Crane games and prizes', 5: 'Figures and toys', 6: 'Anime goods, open 10:00-21:00'}
-PHOTOS = [IMG['hero'], IMG['radio'], IMG['gigo'], IMG['trader']]
+PHOTOS = [IMG['radio'], IMG['gigo'], IMG['trader'], IMG['anim']]
 BAND = [(p[5], t) for p, t in zip(PP[1:], ['Meet, Vie de France', 'Radio Kaikan, figures', 'COSPA, goods', 'GiGO 3, crane games', 'Trader, toys', 'Animate, goods'])] + [('14:00', 'Done, near the station')]
 WALK = {1: 'walk 3 min', 2: 'walk about 2 min', 3: 'walk about 3 min', 4: 'walk about 4 min', 5: 'walk about 3 min'}
 
