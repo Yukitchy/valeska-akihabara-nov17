@@ -59,7 +59,7 @@ html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 <style>{css}</style></head><body>
 <div class="col"><div class="top"><span>GUEST GUIDE</span><span>AKIHABARA &middot; 5 STOPS</span></div>
 <h1>Hunt for treasure in <em>Akihabara</em></h1></div>
-<div class="col" style="padding:0"><div class="hero"><img src="img/hero.jpg" alt="An aisle of capsule toy machines in an Akihabara shop"><div class="vt">秋葉原</div></div>
+<div class="col" style="padding:0"><div class="hero"><img class="a" src="img/hero.jpg" alt="An aisle of capsule toy machines in an Akihabara shop"><img class="b" src="img/radio-kaikan.jpg" alt="A display case full of anime figures"><img class="c" src="img/gigo.jpg" alt="Rows of crane game machines"><div class="vt">秋葉原</div></div>
 <div class="hb"><span>Tue 17 Nov &middot; 11:00 to 14:00</span><b>Meet inside Vie de France</b></div></div>
 <div class="col"><p class="gp" style="margin-top:18px">Valeska, Stefano and Carolina, this is our route: figure cases, shelves of toys, crane games and anime goods. Dragon Ball Z, Demon Slayer, SPY&times;FAMILY, Jujutsu Kaisen, HUNTER&times;HUNTER, Evangelion, Dandadan, Ghibli, Rurouni Kenshin, and Mazinger Z for Carolina. You do not need to buy anything.</p>
 <div class="maphd"><h2 class="map">The map</h2></div><p class="gp">Tap a pin to see the name, tap again to jump to the place.</p>{mapsvg}<div class="lg"><span><i class=""></i>M is where we meet. Everything is within about 10 minutes on foot.</span></div>

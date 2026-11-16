@@ -17,7 +17,7 @@ h1{margin:14px 0 14px;font-size:clamp(44px,13vw,72px);line-height:.92}h1 em{disp
 .chev{width:.42em;height:.42em;flex:none;transition:transform .2s}.areasw[open] .chev{transform:rotate(180deg)}.areasw[open] small{visibility:hidden}
 .areasw ul{list-style:none;margin:6px 0 0;padding:6px 0;background:var(--ink);position:absolute;left:0;z-index:5;min-width:min(100%,320px)}.areasw li a{display:block;padding:12px 18px;color:#fff;text-decoration:none;font:900 .55em/1 Archivo,sans-serif;font-stretch:62%;letter-spacing:.02em}.areasw li a:hover,.areasw li a:focus{background:var(--red)}
 .areasw li a i{font-style:normal;margin-left:.4em;color:#FF7A6E}
-.hero{position:relative}.hero img{display:block;width:100%;height:auto}
+.hero{position:relative;display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:4/3;background:var(--ink)}.hero img{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:cover}.hero .a{grid-row:1/3}
 .vt{position:absolute;left:14px;top:0;background:var(--red);color:#fff;font:900 34px/1.05 "Noto Sans JP",sans-serif;writing-mode:vertical-rl;padding:12px 10px;letter-spacing:.06em}
 .hb{background:var(--ink);color:#fff;display:flex;justify-content:space-between;padding:14px 16px;font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase}.hb b{color:#FF7A6E}
 h2.map{margin:30px 0 10px;font-size:34px}
