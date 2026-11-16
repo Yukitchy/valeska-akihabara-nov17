@@ -5,12 +5,14 @@ PDF = 'valeska-akihabara-nov17.pdf'
 P = [None,
  (35.69836, 139.77311, 'Vie de France Dining, meeting point', 'Vie de France', 'r', '11:00'),
  (35.69788, 139.77195, 'Akihabara Radio Kaikan', 'Radio Kaikan', 'l', '11:10'),
- (35.698345, 139.771072, 'COSPA G-STORE Akiba, 4th floor', 'COSPA 4F', 'l', '11:45'),
- (35.699192, 139.770889, 'GiGO Akihabara 3', 'GiGO 3', 'l', '12:20'),
- (35.70090, 139.77130, 'Trader Akihabara', 'Trader', 'l', '13:00'),
- (35.700405, 139.771667, 'Animate Akihabara', 'Animate', 'r', '13:35')]
-IMG = dict(hero='img/hero.jpg', radio='img/radio-kaikan.jpg', trader='img/trader.jpg', gigo='img/gigo.jpg', anim='img/animate.jpg', cospa='img/cospa.jpg')
-CREDITS = ['Gashapon Shop in Akihabara, Tokyo, Japan.jpg by Ubahnverleih, CC0',
+ (35.698345, 139.771072, 'COSPA G-STORE Akiba, 4th floor', 'COSPA 4F', 'l', '11:35'),
+ (35.699192, 139.770889, 'GiGO Akihabara 3', 'GiGO 3', 'l', '12:00'),
+ (35.70090, 139.77130, 'Trader Akihabara', 'Trader', 'l', '12:40'),
+ (35.700405, 139.771667, 'Animate Akihabara', 'Animate', 'r', '13:10'),
+ (35.6977477, 139.7734791, 'BOOKOFF Akihabara Ekimae', 'BOOKOFF', 'r', '13:40')]
+IMG = dict(hero='img/hero.jpg', radio='img/radio-kaikan.jpg', trader='img/trader.jpg', gigo='img/gigo.jpg', anim='img/animate.jpg', cospa='img/cospa.jpg', manga='img/manga.jpg', fig='img/figurecase.jpg', figuarts='img/figuarts.jpg')
+CREDITS = ['Anime and manga bookshop in Kyoto (008 Anime and manga bookshop in Japan).jpg by Marek Slusarczyk, CC BY 3.0',
+ 'Gashapon Shop in Akihabara, Tokyo, Japan.jpg by Ubahnverleih, CC0',
  'Akihabara August 2014 09.JPG by Piotrus, CC BY-SA 3.0',
  'Vintage Action Figures (3276196274).jpg by paranoidnotandroid, CC BY 2.0',
  'GiGO Akihabara UFO Catcher Machines 15-09-2024.jpg by BWard 1997, CC BY 4.0',
