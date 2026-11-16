@@ -19,7 +19,7 @@ S = [
  (4, 'Treasure', 'TRADER', 'TRADER', 'trader.jpg', 'Figures and toys, packed to the ceiling', 'トレーダー',
   'A bright shop crammed with figures and toys. Take your time and look at every shelf: this is where Carolina can hunt for Mazinger Z. The photo shows a case of vintage robot toys, the kind of thing we look for.', None, None, 'Trader Akihabara main store'),
  (5, 'Goods', 'ANIMATE', 'ANIMATE AKIHABARA', 'animate.jpg', 'Anime goods, many series', 'アニメイト秋葉原',
-  'Several floors of current anime and manga goods: Demon Slayer, SPY&times;FAMILY, Jujutsu Kaisen, HUNTER&times;HUNTER, Dandadan and more. The Annex building has a floor of capsule toys, like the wall in the photo. A good last stop for souvenirs.', '10:00 to 21:00', '10:00 to 21:00, open daily (official site, checked on 5 Nov 2026)', 'Animate Akihabara'),
+  'Several floors of current anime and manga goods: Demon Slayer, SPY&times;FAMILY, Jujutsu Kaisen, HUNTER&times;HUNTER, Dandadan and more. The photo shows the shop front on Chuo-dori. A good last stop for souvenirs.', '10:00 to 21:00', '10:00 to 21:00, open daily (official site, checked on 5 Nov 2026)', 'Animate Akihabara'),
 ]
 N = {p[0]: p for p in S}
 clock = '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 4.5V8l2.5 1.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
@@ -48,7 +48,7 @@ for t, a, b, _ in R:
     else: tl += f'<li><b>{t}</b><span>{a}<em>{b}</em></span></li>'
 route = (f'<section class="route" id="route"><div class="hd"><span class="big">&rarr;</span><div><span class="genre">Tuesday, November 17</span><h3>THE ROUTE</h3></div></div>'
          f'<p class="tx">Meet at 11:00, finish around 14:00. All on foot, all within a small area.</p><ul class="tl">{tl}</ul></section>')
-credits = ('The photo for COSPA is a capsule toy aisle from another shop. The photos show the kind of place, not always the shop itself. All from Wikimedia Commons: ' + '; '.join(CREDITS) + '. Animate hours come from its official site, checked on November 5. Other hours were not confirmed. The map is a simple sketch, not to scale, and the positions of Trader and COSPA are approximate. Times are approximate and can move on the day.')
+credits = ('The photo for COSPA shows the building. Photos for Radio Kaikan, Trader and the hero show the kind of place, not the shop itself. The photo for GiGO is from a GiGO Akihabara arcade, and the Animate photo is the shop itself. All from Wikimedia Commons: ' + '; '.join(CREDITS) + '. Animate hours come from its official site, checked on November 5. Other hours were not confirmed. The map is a simple sketch, not to scale, and the positions of Trader and COSPA are approximate. Times are approximate and can move on the day.')
 html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Akihabara Anime Tour for Valeska, Stefano &amp; Carolina</title><meta name="robots" content="noindex,nofollow">
 <meta name="description" content="Five stops in Akihabara: Radio Kaikan, COSPA, GiGO 3, Trader and Animate. Tuesday, November 17, 11:00 to 14:00.">
 <meta property="og:type" content="website"><meta property="og:url" content="{URL}"><meta property="og:site_name" content="Akihabara Anime Tour">

@@ -14,5 +14,5 @@ CREDITS = ['Gashapon Shop in Akihabara, Tokyo, Japan.jpg by Ubahnverleih, CC0',
  'Akihabara August 2014 09.JPG by Piotrus, CC BY-SA 3.0',
  'Vintage Action Figures (3276196274).jpg by paranoidnotandroid, CC BY 2.0',
  'GiGO Akihabara UFO Catcher Machines 15-09-2024.jpg by BWard 1997, CC BY 4.0',
- 'Wall of Gachapon, Akihabara.jpg by Steve Nagata, CC BY 2.0',
+ 'Animate Akihabara (53443771814).jpg by Dick Thomas Johnson, CC BY 2.0',
  'Onoden main building (COSPA) by Tokumeigakarinoaoshima, CC BY-SA 4.0']
