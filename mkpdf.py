@@ -11,12 +11,12 @@ UA = {'User-Agent': 'route-sheet/1.0'}
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.mapcache'); os.makedirs(CACHE, exist_ok=True)
 
 # ---- data (shared with build.py via data.py) -----------------------------------------------------
-STOPS = {i: (PP[i][3], PP[i][0], PP[i][1]) for i in range(1, 6)}
-NAMES = {i: PP[i][2] for i in range(1, 6)}
-HOURS = {1: 'BiTO AKIBA PLAZA 1F, Electric Town exit', 2: 'Figure and hobby shops', 3: 'Figures and toys', 4: 'Crane games and prizes', 5: 'Anime goods, open 10:00-21:00'}
+STOPS = {i: (PP[i][3], PP[i][0], PP[i][1]) for i in range(1, 7)}
+NAMES = {i: PP[i][2] for i in range(1, 7)}
+HOURS = {1: 'BiTO AKIBA PLAZA 1F, Electric Town exit', 2: 'Figure and hobby shops', 3: 'Character goods, 4th floor', 4: 'Crane games and prizes', 5: 'Figures and toys', 6: 'Anime goods, open 10:00-21:00'}
 PHOTOS = [IMG['hero'], IMG['radio'], IMG['gigo'], IMG['trader']]
-BAND = [(p[5], t) for p, t in zip(PP[1:], ['Meet, Vie de France', 'Radio Kaikan, figures', 'Trader, toys', 'GiGO 3, crane games', 'Animate, goods'])] + [('14:00', 'Done, near the station')]
-WALK = {1: 'walk 3 min', 2: 'walk about 8 min', 3: 'walk about 4 min', 4: 'walk about 4 min'}
+BAND = [(p[5], t) for p, t in zip(PP[1:], ['Meet, Vie de France', 'Radio Kaikan, figures', 'COSPA, goods', 'GiGO 3, crane games', 'Trader, toys', 'Animate, goods'])] + [('14:00', 'Done, near the station')]
+WALK = {1: 'walk 3 min', 2: 'walk about 2 min', 3: 'walk about 3 min', 4: 'walk about 4 min', 5: 'walk about 3 min'}
 
 # ---- map rendering (PIL, OSM tiles, red route + arrows + numbered labelled pins) ----------------
 def get(url, binary=False):
@@ -114,8 +114,8 @@ def render(out, W, H, pins, legs, stations, dots=()):
 
 S = lambda n: (STOPS[n][1], STOPS[n][2])
 def make_maps():
-    legs = [('foot', foot(S(i), S(i + 1))) for i in range(1, 5)]
-    render(f'{CACHE}/map_aki.png', 1000, 1000, [(i, STOPS[i][0], *S(i)) for i in range(1, 6)], legs, [])
+    legs = [('foot', foot(S(i), S(i + 1))) for i in range(1, 6)]
+    render(f'{CACHE}/map_aki.png', 1000, 1000, [(i, STOPS[i][0], *S(i)) for i in range(1, 7)], legs, [])
 
 # ---- html ---------------------------------------------------------------------------------------
 def leg(txt): return f'<li class="leg"><u></u>{txt}</li>'
@@ -125,7 +125,7 @@ def build_html():
     band = ''.join(f'<div class="s{" first" if i == 0 else " last" if i == len(BAND) - 1 else ""}"><b>{t}</b>{x}</div>' for i, (t, x) in enumerate(BAND))
     photos = ''.join(f'<div><img src="{b64(os.path.join(os.path.dirname(os.path.abspath(__file__)), u))}" alt=""></div>' for u in PHOTOS)
     rows = ''
-    for i in range(1, 6):
+    for i in range(1, 7):
         rows += f'<li><i>{i}</i>{NAMES[i]}<small>{HOURS[i]}</small></li>'
         if i in WALK: rows += leg(WALK[i])
     rows += '<li class="back"><span>Done around 14:00, near JR Akihabara Station (about 7 min on foot from Animate).</span></li>'
